@@ -9,9 +9,12 @@
 
 ### A First Example
 
-#### In a temporary directory, put the following grammar inside file Hello.g4:
+- [__Source:__ [Getting Started with Antlr V4](https://theantlrguy.atlassian.net/wiki/display/ANTLR4/Getting+Started+with+ANTLR+v4)]  
+- I.e., After you have setup and installed Antlr v4 on your platform.  
+  
+  
+#### In a temporary directory, put the following grammar inside file `Hello.g4`:
 
-Hello.g4 
 ```
 // Define a grammar called Hello  
 grammar Hello;  
@@ -30,9 +33,9 @@ $ javac Hello*.java
 #### Now test it:
 ```
 $ grun Hello r -tree  
-hello parrt  
-^D  
-(r hello parrt)  
+hello python
+^D
+(r hello python)
 ```
 
 (That ^D means EOF on Unix; it's ^Z in Windows.) The -tree option prints the parse tree in LISP notation.  
@@ -41,9 +44,10 @@ hello parrt
 
 ```
 $ grun Hello r -gui  
-hello parrt  
+hello python  
 ^D  
 ```
 
-That pops up a dialog box showing that rule r matched keyword hello followed by identifier parrt.  
-![](./hello-parrt.png)
+That pops up a dialog box showing that _rule_ `r` matched _keyword_ `hello` followed by _identifier_ `python`.  
+
+![](./hello_python_gui.png)
