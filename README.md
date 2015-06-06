@@ -52,6 +52,8 @@ That pops up a dialog box showing that _rule_ `r` matched _keyword_ `hello` foll
 
 ![](./hello_python_gui.png)
 
+***
+
 ### A Second Example
 #### Using the `Python.g4` grammar.
 
