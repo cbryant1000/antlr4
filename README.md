@@ -51,3 +51,20 @@ hello python
 That pops up a dialog box showing that _rule_ `r` matched _keyword_ `hello` followed by _identifier_ `python`.  
 
 ![](./hello_python_gui.png)
+
+### A Second Example
+#### Using the `Python.g4` grammar.
+
+```
+$ cd python
+$ antlr4 Python.g4
+$ javac Python*.java
+```
+
+#### Now test it:
+```
+$ grun Python python -tree  
+{ "a": 1, "b": (2, 3), "c": [1, 2, "foo"], "d": "boggle"}
+^D
+(python (dict { (pair "a" : (value 1)) , (pair "b" : (value (tuple ( (value 2) , (value 3) )))) , (pair "c" : (value (list [ (value 1) , (value 2) , (value "foo") ]))) , (pair "d" : (value "boggle")) }))
+```
